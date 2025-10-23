@@ -9,6 +9,7 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import LanguageIcon from "@mui/icons-material/Language";
 
 
 const root = {
@@ -53,6 +54,11 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip
           icon={<MonetizationIcon />}
           label={`${movie.revenue.toLocaleString()}`}
+        />
+        <Chip
+          icon={<LanguageIcon/>}
+          label={`Orignal Language: ${movie.original_language}`}
+          sx={{...chip}}
         />
         <Chip
           icon={<StarRate />}
