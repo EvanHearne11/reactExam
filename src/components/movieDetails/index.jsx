@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
 import LanguageIcon from "@mui/icons-material/Language";
-
+import SavingsIcon from '@mui/icons-material/Savings';
 
 const root = {
   display: "flex",
@@ -58,6 +58,11 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip
           icon={<LanguageIcon/>}
           label={`Orignal Language: ${movie.original_language}`}
+          sx={{...chip}}
+        />
+         <Chip
+          icon={<SavingsIcon/>}
+          label={`Budget: ${movie.budget.toLocaleString()}`}
           sx={{...chip}}
         />
         <Chip
